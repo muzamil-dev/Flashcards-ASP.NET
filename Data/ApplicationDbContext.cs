@@ -7,7 +7,7 @@ using FlashcardsApp.Models;
 namespace FlashcardsApp.Data
 {
     // Application database context class
-   public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         // this is the constructor for the application database context
         // Constructor: passes options (like connection string, db provider) to base class
@@ -22,3 +22,4 @@ namespace FlashcardsApp.Data
         public DbSet<Deck> Decks { get; set; }
     }
 }
+
