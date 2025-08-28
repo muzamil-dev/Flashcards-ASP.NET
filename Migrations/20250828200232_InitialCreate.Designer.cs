@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MyWebApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250826165415_InitialCreate")]
+    [Migration("20250828200232_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -106,14 +106,12 @@ namespace MyWebApp.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Answer")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("DeckId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Question")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

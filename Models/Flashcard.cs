@@ -3,10 +3,10 @@ namespace FlashcardsApp.Models
     public class Flashcard
     {
         public int Id { get; set; }
-        public string Question { get; set; }
-        public string Answer { get; set; }
+        public string? Question { get; set; }
+        public string? Answer { get; set; }
         public int DeckId { get; set; }
-        public Deck Deck { get; set; }
+        public Deck? Deck { get; set; }
     }
 }
 // {get : set} means the Question is a property of the Flashcard.
@@ -19,3 +19,8 @@ namespace FlashcardsApp.Models
 // If we wrote just { get; } → you can only look, not change it (read-only).
 
 // If we wrote just { set; } → you can only change it, not look at it (write-only, very rare).
+
+//--------
+// No ? → “This box must always have something inside it.”
+// With ? → “This box can be empty, and that’s fine.”
+// int dont need it cause it can be 0

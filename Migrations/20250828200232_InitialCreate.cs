@@ -175,8 +175,8 @@ namespace MyWebApp.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Question = table.Column<string>(type: "TEXT", nullable: false),
-                    Answer = table.Column<string>(type: "TEXT", nullable: false),
+                    Question = table.Column<string>(type: "TEXT", nullable: true),
+                    Answer = table.Column<string>(type: "TEXT", nullable: true),
                     DeckId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

@@ -103,14 +103,12 @@ namespace MyWebApp.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Answer")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("DeckId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Question")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
