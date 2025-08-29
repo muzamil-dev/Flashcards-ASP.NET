@@ -1,0 +1,43 @@
+@model IEnumerable<FlashcardsApp.Models.Deck>  
+<!-- 👆 This tells ASP.NET: the page will receive a list of Deck objects -->
+
+@{
+    ViewData["Title"] = "Your Decks";  // 👈 sets the browser tab/page title
+}
+
+<div class="container mt-4">
+    <!-- Title row with "Add New Deck" button -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Your Decks</h2>
+        <!-- When clicked, this goes to DecksController.Create -->
+        <a asp-action="Create" class="btn btn-primary">+ New Deck</a>
+    </div>
+
+    <div class="row">
+        <!-- Loop through each deck in the model (list of decks) -->
+        @foreach (var deck in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body d-flex flex-column">
+                        <!-- Show deck name -->
+                        <h5 class="card-title">@deck.Name</h5>
+
+                        <!-- Show how many flashcards are inside -->
+                        <p class="card-text text-muted">
+                            @deck.Flashcards?.Count() ?? 0 flashcards
+                        </p>
+
+                        <!-- Buttons for actions -->
+                        <div class="mt-auto">
+                            <a asp-action="Details" asp-route-id="@deck.Id" class="btn btn-sm btn-outline-primary">View</a>
+                            <a asp-controller="Study" asp-action="Start" asp-route-deckId="@deck.Id" class="btn btn-sm btn-success">Study</a>
+                            <a asp-action="Edit" asp-route-id="@deck.Id" class="btn btn-sm btn-warning">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@deck.Id" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

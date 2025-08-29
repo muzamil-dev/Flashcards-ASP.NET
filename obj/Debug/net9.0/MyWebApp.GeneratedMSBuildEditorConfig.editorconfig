@@ -28,6 +28,14 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[/Users/Muzamil/Projects/MyWebApp/Views/Decks/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVja3MvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/Muzamil/Projects/MyWebApp/Views/Decks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVja3MvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/Muzamil/Projects/MyWebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
