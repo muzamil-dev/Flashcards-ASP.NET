@@ -32,6 +32,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVja3MvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/Muzamil/Projects/MyWebApp/Views/Decks/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVja3MvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/Muzamil/Projects/MyWebApp/Views/Decks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGVja3MvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
