@@ -1,0 +1,28 @@
+@model FlashcardsApp.Models.Flashcard
+
+@{
+    ViewData["Title"] = "Add Flashcard";
+}
+
+<div class="container mt-4">
+    <h2>Add a Flashcard</h2>
+
+    <form asp-action="Create" method="post">
+        <input type="hidden" asp-for="DeckId" value="@ViewBag.DeckId" />
+
+        <div class="mb-3">
+            <label asp-for="Question" class="form-label"></label>
+            <input asp-for="Question" class="form-control" />
+            <span asp-validation-for="Question" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Answer" class="form-label"></label>
+            <input asp-for="Answer" class="form-control" />
+            <span asp-validation-for="Answer" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">Save</button>
+        <a asp-action="Index" asp-route-deckId="@ViewBag.DeckId" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

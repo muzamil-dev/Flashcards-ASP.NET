@@ -1,0 +1,28 @@
+@model FlashcardsApp.Models.Deck
+
+@{
+    ViewData["Title"] = "Flashcards in " + Model.Name;
+}
+
+<div class="container mt-4">
+    <h2>@Model.Name - Flashcards</h2>
+    <a asp-action="Create" asp-route-deckId="@Model.Id" class="btn btn-primary mb-3">+ Add Flashcard</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Question</th>
+                <th>Answer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var card in Model.Flashcards)
+            {
+                <tr>
+                    <td>@card.Question</td>
+                    <td>@card.Answer</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
