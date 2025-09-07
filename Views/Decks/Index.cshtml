@@ -30,10 +30,10 @@
 
                         <!-- Buttons for actions -->
                         <div class="mt-auto">
-                            <a asp-action="Details" asp-route-id="@deck.Id" class="btn btn-sm btn-outline-primary">View</a>
+                            <a asp-controller="Decks" asp-action="Details" asp-route-id="@deck.Id" class="btn btn-sm btn-outline-primary">View</a>
                             <a asp-controller="Study" asp-action="Start" asp-route-deckId="@deck.Id" class="btn btn-sm btn-success">Study</a>
-                            <a asp-action="Edit" asp-route-id="@deck.Id" class="btn btn-sm btn-warning">Edit</a>
-                            <a asp-action="Delete" asp-route-id="@deck.Id" class="btn btn-sm btn-danger">Delete</a>
+                            <a asp-controller="Decks" asp-action="Edit" asp-route-id="@deck.Id" class="btn btn-sm btn-warning">Edit</a>
+                            <a asp-controller="Decks" asp-action="Delete" asp-route-id="@deck.Id" class="btn btn-sm btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>

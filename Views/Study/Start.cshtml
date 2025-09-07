@@ -1,0 +1,64 @@
+@model FlashcardsApp.Models.Deck
+
+@{
+    ViewData["Title"] = "Study - " + Model.Name;
+}
+
+<div class="container mt-4">
+    <h2>Studying: @Model.Name</h2>
+
+    <div id="flashcard-container" class="card shadow-sm p-4 text-center">
+        <h4 id="flashcard-question"></h4>
+        <p id="flashcard-answer" class="text-muted d-none"></p>
+    </div>
+
+    <div class="mt-3 text-center">
+        <button class="btn btn-primary" onclick="flipCard()">Flip</button>
+        <button class="btn btn-success" onclick="nextCard()">Next</button>
+    </div>
+
+    <a asp-controller="Decks" asp-action="Index" class="btn btn-secondary mt-3">Back to Decks</a>
+</div>
+
+@section Scripts {
+    <script>
+        const flashcards = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.Flashcards));
+        let currentIndex = 0;
+        let showingAnswer = false;
+
+        function loadCard() {
+            document.getElementById("flashcard-question").textContent = flashcards[currentIndex].Question;
+            document.getElementById("flashcard-answer").textContent = flashcards[currentIndex].Answer;
+            document.getElementById("flashcard-answer").classList.add("d-none");
+            document.getElementById("flashcard-question").classList.remove("d-none");
+            showingAnswer = false;
+        }
+
+        function flipCard() {
+            const questionEl = document.getElementById("flashcard-question");
+            const answerEl = document.getElementById("flashcard-answer");
+
+            if (showingAnswer) {
+                answerEl.classList.add("d-none");
+                questionEl.classList.remove("d-none");
+                showingAnswer = false;
+            } else {
+                answerEl.classList.remove("d-none");
+                questionEl.classList.add("d-none");
+                showingAnswer = true;
+            }
+        }
+
+        function nextCard() {
+            if (currentIndex < flashcards.length - 1) {
+                currentIndex++;
+                loadCard();
+            } else {
+                alert("You've reached the end of the deck!");
+            }
+        }
+
+        // Load first card
+        loadCard();
+    </script>
+}
