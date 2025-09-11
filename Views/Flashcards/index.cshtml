@@ -24,13 +24,13 @@
                     <td>@card.Answer</td>
                     <td>
                         <a asp-action="Details" asp-route-id="@card.Id" class="btn btn-sm btn-outline-primary">View</a>
-                        <a asp-action="Edit" asp-route-id="@card.Id" class="btn btn-sm btn-warning">Edit</a>
-                        <a asp-action="Delete" asp-route-id="@card.Id" class="btn btn-sm btn-danger">Delete</a>
+                        <a asp-action="Edit" asp-route-id="@card.Id" class="btn btn-sm btn-outline-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@card.Id" class="btn btn-sm btn-outline-primary">Delete</a>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
 
-    <a asp-controller="Decks" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-secondary">← Back to Deck</a>
+    <a asp-controller="Decks" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-primary">← Back to Deck</a>
 </div>

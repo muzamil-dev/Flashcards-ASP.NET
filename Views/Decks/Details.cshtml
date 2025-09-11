@@ -10,7 +10,7 @@
     <p><strong>ID:</strong> @Model.Id</p>
     <p><strong>Number of Flashcards:</strong> @Model.Flashcards.Count()</p>
 
-    <a asp-action="Index" class="btn btn-secondary">Back</a>
+    <a asp-action="Index" class="btn btn-sm btn-outline-primary">Back</a>
     <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
     <a asp-controller="Flashcards" asp-action="Index" asp-route-deckId="@Model.Id" class="btn btn-primary"> View Flashcards </a>
 
